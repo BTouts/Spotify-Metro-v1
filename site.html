@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify BPM Recommendation</title>
+</head>
+<body>
+    <h1>Spotify BPM Recommendation</h1>
+    <button onclick="login()" id="loginButton">Login with Spotify</button><br>
+    <label for="trackID">Track ID:</label>
+    <input type="text" id="trackID"><br>
+    <label for="minBPM">Min BPM:</label>
+    <input type="number" id="minBPM" min="0" max="500" value="0"><br>
+    <label for="maxBPM">Max BPM:</label>
+    <input type="number" id="maxBPM" min="0" max="500" value="500"><br>
+    <button onclick="getRecommendations()">Get Recommendations</button><br>
+    <h2>Now Playing:</h2>
+    <p><strong>Song:</strong> <span id="currentSong"></span></p>
+    <p><strong>Artist:</strong> <span id="currentArtist"></span></p>
+    
+    <script src="script.js"></script>
+</body>
+</html>
