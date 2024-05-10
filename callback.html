@@ -1,0 +1,29 @@
+// callback.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Callback</title>
+</head>
+<body>
+    <script>
+        // Function to handle access token extraction from URL fragment
+        function handleAccessToken() {
+            const hash = window.location.hash.substring(1);
+            const params = new URLSearchParams(hash);
+            const accessToken = params.get('access_token');
+
+            // Store the access token in local storage or send it to the server
+            localStorage.setItem('spotifyAccessToken', accessToken);
+
+            // Redirect to the main page of your application
+            window.location.href = 'site.html'; // Replace with your main page URL
+        }
+
+        // Call the function to handle access token extraction
+        handleAccessToken();
+    </script>
+</body>
+</html>

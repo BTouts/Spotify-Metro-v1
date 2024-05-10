@@ -1,10 +1,10 @@
-const accessToken = 'BQCdE9shtkdtYR5lJ5G17v7sWH6zG0mvM81lfHGxqfqqTGYVb6MbgLQmb7ntYhW4knRWHyluBiPPZKr577gocKDvrr_F8f87jDxCQKXsVSMRzbWsX9JYYlM5pICUhL7nmRNxMIga1LhMMxkdyNvb9DLGWe3n2akpG5sk406F_gHc5tx0-ALq25OI0JuGa8EJxLMCHmNR9qp5K8w8Sdge5USyOfaRuCw&';
+let accessToken = null;
 
 // Function to handle user login
 async function login() {
     try {
-        const clientId = '7b9e6e75bbff4e0e9fc099ba7890ec5b'; // Replace with your Spotify client ID
-        const redirectUri = encodeURIComponent('https://localhost:3000/callback'); // Replace with your redirect URI
+        const clientId = 'your_client_id'; // Replace with your Spotify client ID
+        const redirectUri = encodeURIComponent('https://your-redirect-uri.com/callback'); // Replace with your redirect URI
         const scopes = encodeURIComponent('user-read-private playlist-modify-public'); // Define required scopes
         const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scopes}`;
 
