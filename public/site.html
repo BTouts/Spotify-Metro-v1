@@ -7,7 +7,24 @@
 </head>
 <body>
     <h1>Spotify BPM Recommendation</h1>
-    <button id="loginButton">Login with Spotify</button><br>
+    <button onclick="loginWithSpotify()">Login with Spotify</button>
+
+    <script>
+        async function loginWithSpotify() {
+            // Make a GET request to the /login route on your Express.js server
+            try {
+                const response = await fetch('/login');
+                if (response.ok) {
+                    // If the request is successful, the user will be redirected to the Spotify login page
+                    console.log('Redirecting to Spotify login page...');
+                } else {
+                    console.error('Failed to initiate login:', response.status);
+                }
+            } catch (error) {
+                console.error('Error initiating login:', error);
+            }
+        }
+    </script>
     <label for="trackID">Track ID:</label>
     <input type="text" id="trackID"><br>
     <label for="minBPM">Min BPM:</label>
